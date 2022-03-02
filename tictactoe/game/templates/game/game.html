@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    {% load mathfilters %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'game/style.css' %}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'game/events.js' %}"></script>
+</head>
+
+<body class="body">
+<div class="grid-container">
+    {% for i in game_size %}
+    <div style="display:inline-flex">
+        {% for j in game_size %}
+        <div id={{i|mul:4|add:j}} class="grid-item"></div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+<div>
+    <input onClick="alert('You clicked the button using Javascript.');" type="button" id="buttonId" name="_mail" value="Enviar Mail">
+    <button id="about-btn"> Click Me - I'm Javascript on Speed</button>
+</div>
+</body>
+</html>

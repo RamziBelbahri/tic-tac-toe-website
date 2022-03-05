@@ -40,6 +40,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'mathfilters',
     'jquery',
+    'home.apps.HomeConfig',
     'game.apps.GameConfig',
     'django.contrib.admin',
     'django.contrib.auth',
